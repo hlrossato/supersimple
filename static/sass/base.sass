@@ -6,35 +6,50 @@ html
     font-size: 16px
 
 body
-    padding: 2rem 1.5rem
-    line-height: 1.5
-    color: #555
     background-color: #fff
+    color: #555
+    line-height: 1.5
+    padding: 2rem 1.5rem
+
+.sansita-font
+    font-family: 'Sansita', sans-serif
+    font-style: italic
+    font-weight: 700
+
+.source-serif-pro-font
+    font-family: 'Source Serif Pro', serif
+    font-weight: 400
+
+.font-14
+    font-size: 14px
+
+.font-18
+    font-size: 18px
 
 .container
-    max-width: 32rem
     margin: 0 auto
+    max-width: 32rem
 
 h1, h2, h3, h4, h5, h6
-    margin-top: 0
-    margin-bottom: .5rem
+    color: #333
     font-weight: bold
     line-height: 1.1
-    color: #333
     letter-spacing: -.025rem
+    margin-top: 0
+    margin-bottom: .5rem
 
 header
-    margin-bottom: 0
-    font-size: 1rem
     color: #777
+    font-size: 1rem
+    margin-bottom: 0
 
 h3
     font-size: 1.2rem
 
 .nav
-    padding-left: 0
     margin-bottom: 0
     list-style: none
+    padding-left: 0
 
     li
         display: inline-block
@@ -43,32 +58,36 @@ h3
             text-decoration: none
 
 .intro
-    margin-top: 2rem
+    margin-top: 28.8px
 
 .intro::after
-    display: block
+    background-color: #eee
     content: ""
-    width: 100px
+    display: block
     height: 1px
     margin: 3rem auto
-    background-color: #eee
+    width: 100px
 
 .content
     margin-bottom: 3rem
 
 .content::after
-    display: block
+    background-color: #eee
     content: ""
-    width: 100px
+    display: block
     height: 1px
     margin: 3rem auto
-    background-color: #eee
+    width: 100px
 
 .post
     margin-bottom: 1rem
     overflow: auto
 
     &__date
+        color: #ccc
         display: block
         margin: 0 0 0.3rem
-        color: #ccc
+
+    &__title
+        color: #333
+        text-decoration: none
