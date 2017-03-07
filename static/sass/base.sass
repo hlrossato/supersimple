@@ -40,7 +40,7 @@ header
 .site-name
     color: #e74c3c
     font-size: 24px
-    margin: 12px 0 16px 0
+    margin: 12px 0 20px 0
     text-align: center
 
 .profile
@@ -86,9 +86,6 @@ header
     height: 1px
     margin: 40px auto
     width: 200px
-
-.content
-    margin-bottom: 48px
 
 .content::after
     background-color: #eee
@@ -139,7 +136,7 @@ footer
         text-align: right
 
     &__date
-        color: #ccc
+        color: #b5b5b5
         font-weight: 300
         text-align: right
 
@@ -151,8 +148,29 @@ footer
 
 pre
     margin-top: 16px !important
-    font-size: 14px
+    font-size: 12px
     font-weight: 300
+
+.social
+    text-align: center
+
+    &__item
+        display: inline-block
+        margin-left: 16px
+
+        &:hover
+            color: #e74c3c
+
+        &:first-child
+            margin-left: 0
+
+.social::after
+    background-color: #eee
+    content: ""
+    display: block
+    height: 1px
+    margin: 40px auto
+    width: 200px
 
 
 // MEDIA QUERIES
@@ -166,7 +184,7 @@ pre
         font-size: 16px
 
     pre
-        font-size: 16px
+        font-size: 14px
 
     .site-name
         font-size: 26px
@@ -176,9 +194,16 @@ pre
         margin-bottom: 16px
 
         &__title
-            font-size: 32px
+            font-size: 20px
 
         &__date
             float: right
             font-size: 16px
             margin-left: 16px
+
+    .post-detail
+        &__title
+            font-size: 30px
+
+        &__date
+            font-size: 18px
