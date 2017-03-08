@@ -127,7 +127,7 @@ footer {
   color: #b5b5b5;
   font-weight: 300;
   text-align: right; }
-.post-detail__text {
+.post-detail p {
   color: #454545;
   font-weight: 300;
   line-height: 26px;
@@ -155,6 +155,9 @@ pre {
   height: 1px;
   margin: 40px auto;
   width: 200px; }
+
+.im {
+  color: #555 !important; }
 
 @media screen and (min-width: 768px) {
   header {
