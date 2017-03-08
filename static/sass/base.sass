@@ -22,7 +22,7 @@ body
 
 .container
     margin: 0 auto
-    max-width: 512px
+    max-width: 672px
 
 h1, h2, h3, h4, h5, h6
     color: #333
@@ -51,7 +51,15 @@ header
     border-radius: 100%
     height: 100px
     margin: 0 auto
+    position: relative
     width: 100px
+
+    a
+        position: absolute
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%
 
 .nav
     list-style: none
@@ -158,9 +166,6 @@ pre
         display: inline-block
         margin-left: 16px
 
-        &:hover
-            color: #e74c3c
-
         &:first-child
             margin-left: 0
 
@@ -174,6 +179,14 @@ pre
 
 .im
     color: #555 !important
+
+    &:hover
+        color: #e74c3c !important
+
+.highlight
+    margin-top: 10px
+    padding: 0 15px 20px
+    overflow: auto
 
 
 // MEDIA QUERIES
@@ -210,3 +223,6 @@ pre
 
         &__date
             font-size: 18px
+
+    .highlight
+        padding: 0 30px 30px
