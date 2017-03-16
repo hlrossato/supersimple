@@ -208,6 +208,10 @@ pre {
     font-size: 18px; }
 
   .highlight {
-    padding: 0 30px 30px; } }
+    padding: 0 30px 30px; }
+
+  .intro::after,
+  .content::after {
+    max-width: 400px; } }
 
 /*# sourceMappingURL=base.css.map */
