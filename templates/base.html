@@ -9,12 +9,16 @@
         <link rel="stylesheet" href="{{ SITEURL }}/theme/css/pygment.css">
         <link href="https://fonts.googleapis.com/css?family=Sansita:400,400i,700,700i,800,800i,900,900i|Merriweather:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.iconmonstr.com/1.1.0/css/iconmonstr-iconic-font.min.css">
+
+        {% if FAVICON %}
+            <link rel="icon" type="image/png" href="{{ SITEURL }}/images/{{ FAVICON }}">
+        {% endif %}
     </head>
     <body>
         <div class="container">
             <header>
                 {% if PROFILE_IMAGE %}
-                    <h1 class="profile" style="background-image:url({{ SITEURL }}/theme/images/{{ PROFILE_IMAGE }})">
+                    <h1 class="profile" style="background-image:url({{ SITEURL }}/images/{{ PROFILE_IMAGE }})">
                         <a href="/"></a>
                     </h1>
                 {% else %}
