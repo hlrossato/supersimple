@@ -13,10 +13,10 @@ Pelican theme as simple as it can be. Based on a lot of other themes and ideas.
 
 ** Note **
 Supersimple theme uses the key of the tuple to print the icon. In case the icon
-your trying to use doesn't work, please check [here](https://iconmonstr.com/iconicfont){:target="_blank"} to see if it's available.
+your trying to use doesn't work, please check [here](https://iconmonstr.com/iconicfont) to see if it's available.
 
 SOCIAL = (
     ('github', 'link_to_your_github'), 
 )
 
-See it live at [hlrossato.com](http://www.hlrossato.com){:target="_blank"}
+See it live at [hlrossato.com](http://www.hlrossato.com)
