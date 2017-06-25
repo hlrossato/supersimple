@@ -39,7 +39,7 @@ header
 
 .site-name
     color: #e74c3c
-    font-size: 24px
+    font-size: 28px
     margin: 12px 0 20px 0
     text-align: center
 
@@ -66,10 +66,11 @@ header
     margin-bottom: 0
     padding-left: 0
     text-align: center
+    text-transform: uppercase
 
     li
         display: inline-block
-        margin-left: 8px
+        margin-left: 10px
 
         &:first-child
             margin-left: 0
@@ -86,7 +87,7 @@ header
 .intro
     margin-top: 30px
     text-align: center
-    
+
     a
         color: #333
         font-weight: 400
@@ -113,19 +114,20 @@ header
     width: 200px
 
 .post
-    margin-bottom: 16px
+    margin-bottom: 24px
     overflow: auto
 
     &__date
         color: #b1b1b1
         display: block
-        font-size: 14px
+        font-size: 12px
 
     &__title
         color: #333
         text-decoration: none
-        font-size: 18px
+        font-size: 16px
         font-weight: 400
+        line-height: 1.4
 
         &:hover
             color: #e74c3c
@@ -148,14 +150,14 @@ footer
 
     &__title
         color: #333
-        font-size: 24px
+        font-size: 22px
         font-weight: 700
-        text-align: right
 
     &__date
         color: #b5b5b5
+        font-size: 14px
         font-weight: 300
-        text-align: right
+        margin-bottom: 20px
 
     p
         color: #454545
@@ -173,10 +175,16 @@ pre
 
     &__item
         display: inline-block
-        margin-left: 16px
+        margin-left: 26px
 
         &:first-child
             margin-left: 0
+
+        a
+            color: #333333
+
+            &:hover
+                color: #e74c3c
 
 .social::after
     background-color: #eee
@@ -201,6 +209,9 @@ pre
 // MEDIA QUERIES
 // max-width=768px
 @media screen and (min-width: 768px)
+    .container
+        width: 800px
+
     header
         padding-top: 16px
         text-align: center
@@ -212,30 +223,35 @@ pre
         font-size: 14px
 
     .site-name
-        font-size: 26px
+        font-size: 40px
 
     .post
         line-height: 26px
-        margin-bottom: 16px
+        margin-bottom: 30px
 
         &__title
             font-size: 20px
 
         &__date
-            float: right
-            font-size: 16px
-            margin-left: 16px
+            font-size: 14px
 
     .post-detail
         &__title
             font-size: 30px
 
         &__date
-            font-size: 18px
+            font-size: 16px
+            margin-bottom: 50px
 
     .highlight
         padding: 0 30px 30px
 
     .intro::after,
-    .content::after
-        max-width: 400px
+    .content::after,
+    .social::after,
+        width: 500px
+        max-width: 500px
+
+    .nav
+        li
+            margin-left: 20px

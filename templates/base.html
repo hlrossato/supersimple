@@ -10,6 +10,7 @@
         <link href="https://fonts.googleapis.com/css?family=Sansita:400,400i,700,700i,800,800i,900,900i|Merriweather:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.iconmonstr.com/1.1.0/css/iconmonstr-iconic-font.min.css">
 
+        <script src="https://use.fontawesome.com/38410d01b4.js"></script>
         {% if FAVICON %}
             <link rel="icon" type="image/png" href="{{ SITEURL }}/images/{{ FAVICON }}">
         {% endif %}
@@ -46,10 +47,10 @@
 
             {% if SOCIAL %}
                 <div class="social">
-                {% for name, link in SOCIAL %}
+                {% for social in SOCIAL %}
                     <div class="social__item">
-                        <a href="{{ link }}" target="_blank">
-                            <i class="im im-{{ name }}"></i>
+                        <a href="{{ social.link }}" target="_blank" title="{{ social.name }}">
+                            <i class="fa fa-2x fa-{{ social.icon }}"></i>
                         </a>
                     </div>
                 {% endfor %}

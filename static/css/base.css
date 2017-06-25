@@ -39,7 +39,7 @@ header {
 
 .site-name {
   color: #e74c3c;
-  font-size: 24px;
+  font-size: 28px;
   margin: 12px 0 20px 0;
   text-align: center; }
 
@@ -64,10 +64,11 @@ header {
   list-style: none;
   margin-bottom: 0;
   padding-left: 0;
-  text-align: center; }
+  text-align: center;
+  text-transform: uppercase; }
   .nav li {
     display: inline-block;
-    margin-left: 8px; }
+    margin-left: 10px; }
     .nav li:first-child {
       margin-left: 0; }
     .nav li a {
@@ -106,17 +107,18 @@ header {
   width: 200px; }
 
 .post {
-  margin-bottom: 16px;
+  margin-bottom: 24px;
   overflow: auto; }
   .post__date {
     color: #b1b1b1;
     display: block;
-    font-size: 14px; }
+    font-size: 12px; }
   .post__title {
     color: #333;
     text-decoration: none;
-    font-size: 18px;
-    font-weight: 400; }
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4; }
     .post__title:hover {
       color: #e74c3c; }
 
@@ -134,13 +136,13 @@ footer {
 
 .post-detail__title {
   color: #333;
-  font-size: 24px;
-  font-weight: 700;
-  text-align: right; }
+  font-size: 22px;
+  font-weight: 700; }
 .post-detail__date {
   color: #b5b5b5;
+  font-size: 14px;
   font-weight: 300;
-  text-align: right; }
+  margin-bottom: 20px; }
 .post-detail p {
   color: #454545;
   font-weight: 300;
@@ -156,9 +158,13 @@ pre {
   text-align: center; }
   .social__item {
     display: inline-block;
-    margin-left: 16px; }
+    margin-left: 26px; }
     .social__item:first-child {
       margin-left: 0; }
+    .social__item a {
+      color: #333333; }
+      .social__item a:hover {
+        color: #e74c3c; }
 
 .social::after {
   background-color: #eee;
@@ -179,6 +185,9 @@ pre {
   overflow: auto; }
 
 @media screen and (min-width: 768px) {
+  .container {
+    width: 800px; }
+
   header {
     padding-top: 16px;
     text-align: center; }
@@ -190,28 +199,32 @@ pre {
     font-size: 14px; }
 
   .site-name {
-    font-size: 26px; }
+    font-size: 40px; }
 
   .post {
     line-height: 26px;
-    margin-bottom: 16px; }
+    margin-bottom: 30px; }
     .post__title {
       font-size: 20px; }
     .post__date {
-      float: right;
-      font-size: 16px;
-      margin-left: 16px; }
+      font-size: 14px; }
 
   .post-detail__title {
     font-size: 30px; }
   .post-detail__date {
-    font-size: 18px; }
+    font-size: 16px;
+    margin-bottom: 50px; }
 
   .highlight {
     padding: 0 30px 30px; }
 
   .intro::after,
-  .content::after {
-    max-width: 400px; } }
+  .content::after,
+  .social::after {
+    width: 500px;
+    max-width: 500px; }
+
+  .nav li {
+    margin-left: 20px; } }
 
 /*# sourceMappingURL=base.css.map */
