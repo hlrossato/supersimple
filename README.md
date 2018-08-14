@@ -29,4 +29,4 @@ SOCIAL_TUPLE = (
 # Preview
 ![Screen Shot](screenshot.png)
 
-See it live at [hlrossato.com](http://www.hlrossato.com)
+See it live at [hlrossato.github.io](https://hlrossato.github.io)
