@@ -1,60 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <title>{% block title %}{{ SITENAME }}{% if SUBTITLE %} | {{ SUBTITLE }}{% endif %}{% endblock title %}</title>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}{{ SITENAME }}{% if SUBTITLE %} | {{ SUBTITLE }}{% endif %}{% endblock title %}</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/base.css">
-    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/pygment.css">
-    <link href="https://fonts.googleapis.com/css?family=Sansita:400,400i,700,700i,800,800i,900,900i|Merriweather:300,300i,400,400i,700,700i,900,900i"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.iconmonstr.com/1.1.0/css/iconmonstr-iconic-font.min.css">
+        <link rel="stylesheet" href="{{ SITEURL }}/theme/css/base.css">
+        <link rel="stylesheet" href="{{ SITEURL }}/theme/css/pygment.css">
+        <link href="https://fonts.googleapis.com/css?family=Sansita:400,400i,700,700i,800,800i,900,900i|Merriweather:300,300i,400,400i,700,700i,900,900i"
+            rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+            crossorigin="anonymous">
 
-    <script src="https://use.fontawesome.com/38410d01b4.js"></script> {% if FAVICON %}
-    <link rel="icon" type="image/png" href="{{ SITEURL }}/images/{{ FAVICON }}"> {% endif %}
-</head>
+        {% if FAVICON %}
+        <link rel="icon" type="image/png" href="{{ SITEURL }}/images/{{ FAVICON }}">
+        {% endif %}
+    </head>
 
-<body>
-    <div class="container">
-        <header>
-            {% if PROFILE_IMAGE %}
-            <h1 class="profile" style="background-image:url({{ SITEURL }}/images/{{ PROFILE_IMAGE }})">
-                <a href="/"></a>
-            </h1>
-            {% else %}
-            <h1 class="profile">
-                <a href="/"></a>
-            </h1>
-            {% endif %}
+    <body>
+        <div class="container">
+            <header>
+                {% if PROFILE_IMAGE %}
+                <h1 class="profile" style="background-image:url({{ SITEURL }}/images/{{ PROFILE_IMAGE }})">
+                    <a href="/"></a>
+                </h1>
+                {% else %}
+                <h1 class="profile">
+                    <a href="/"></a>
+                </h1>
+                {% endif %}
 
-            <h3 class="site-name sansita-font">{{ SITENAME }}</h3>
-            {% if INTRO %}
-            <p class="intro merriweather">{{ INTRO }}</p>
-            {% endif %} {% if pages %}
-            <ul class="nav merriweather">
-                {% for page in pages %}
-                <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
-                {% endfor %}
-            </ul>
-            {% endif %} {% if SOCIAL %}
-            <div class="social">
-                {% for social in SOCIAL %}
-                <div class="social__item">
-                    <a href="{{ social.link }}" target="_blank" title="{{ social.name }}">
-                        <i class="fa fa-lg fa-{{ social.icon }}"></i>
-                    </a>
+                <h3 class="site-name sansita-font">{{ SITENAME }}</h3>
+
+                {% if INTRO %}
+                <p class="intro merriweather">{{ INTRO }}</p>
+                {% endif %}
+                
+                {% if pages %}
+                <ul class="nav merriweather">
+                    {% for page in pages %}
+                    <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+                
+                {% if SOCIAL %}
+                <div class="social">
+                    {% for social in SOCIAL %}
+                    <div class="social__item">
+                        <a href="{{ social.link }}" target="_blank" title="{{ social.name }}">
+                            <i class="{{ social.prefix }} fa-lg fa-{{ social.icon }}"></i>
+                        </a>
+                    </div>
+                    {% endfor %}
                 </div>
-                {% endfor %}
-            </div>
-            {% endif %}
-        </header>
+                {% endif %}
 
-        {% block content %}{% endblock content %} {% include "footer.html" %}
-    </div>
-    {% include "ga.html" %} {% block extrajs %}{% endblock extrajs %}
-</body>
+            </header>
 
+            {% block content %}{% endblock content %} {% include "footer.html" %}
+        </div>
+        {% include "ga.html" %} {% block extrajs %}{% endblock extrajs %}
+    </body>
 </html>
