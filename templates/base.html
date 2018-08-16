@@ -15,7 +15,7 @@
             crossorigin="anonymous">
 
         {% if FAVICON %}
-        <link rel="icon" type="image/png" href="{{ SITEURL }}/images/{{ FAVICON }}">
+        <link rel="icon" type="image/png" href="/images/{{ FAVICON }}">
         {% endif %}
     </head>
 
@@ -23,7 +23,7 @@
         <div class="container">
             <header>
                 {% if PROFILE_IMAGE %}
-                <h1 class="profile" style="background-image:url({{ SITEURL }}/images/{{ PROFILE_IMAGE }})">
+                <h1 class="profile" style="background-image:url(/images/{{ PROFILE_IMAGE }})">
                     <a href="/"></a>
                 </h1>
                 {% else %}
